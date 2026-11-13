@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adoption Application | Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                🐾 Animal Care System
+            </div>
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="animals.html">
+                    Animals
+                </a>
+
+                <a href="adoption.html" class="active">
+                    Adoption
+                </a>
+
+                <a href="care.html">
+                    Care & Medical
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="adopter-login.html">
+                    Login
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         PAGE HEADER
+    =============================== -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <div class="page-label">
+                🐾 ADOPTION
+            </div>
+
+            <h1>
+                Adoption Application
+            </h1>
+
+            <p>
+                Complete the form below to apply for animal adoption.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ADOPTION SECTION
+    ============================== -->
+
+    <section class="adoption-section">
+
+        <div class="container">
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="adoption-intro">
+
+                <h2>
+                    Give an Animal a Loving Home
+                </h2>
+
+                <p>
+                    Thank you for your interest in adopting an animal.
+                    Please provide accurate information so that your
+                    application can be properly reviewed.
+                </p>
+
+
+                <div class="adoption-steps">
+
+                    <div class="adoption-step">
+
+                        <strong>1</strong>
+
+                        <span>
+                            Complete the application
+                        </span>
+
+                    </div>
+
+
+                    <div class="adoption-step">
+
+                        <strong>2</strong>
+
+                        <span>
+                            Application review
+                        </span>
+
+                    </div>
+
+
+                    <div class="adoption-step">
+
+                        <strong>3</strong>
+
+                        <span>
+                            Adoption decision
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 APPLICATION FORM
+            ============================== -->
+
+            <div class="adoption-form-card">
+
+                <form id="adoptionForm">
+
+
+                    <!-- PERSONAL INFORMATION -->
+
+                    <div class="form-section">
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="Enter your first name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Enter your last name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Contact Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter your contact number"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="address">
+                                Complete Address
+                            </label>
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="3"
+                                placeholder="Enter your complete address"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==============================
+                         ADOPTION INFORMATION
+                    ============================== -->
+
+                    <div class="form-section">
+
+                        <h2>
+                            Adoption Information
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="selectedAnimal">
+                                Animal You Want to Adopt
+                            </label>
+
+                            <select
+                                id="selectedAnimal"
+                                name="selectedAnimal"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Select an Animal --
+                                </option>
+
+                                <option value="Buddy">
+                                    Buddy
+                                </option>
+
+                                <option value="Luna">
+                                    Luna
+                                </option>
+
+                                <option value="Max">
+                                    Max
+                                </option>
+
+                                <option value="Bella">
+                                    Bella
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="housingType">
+                                Type of Housing
+                            </label>
+
+                            <select
+                                id="housingType"
+                                name="housingType"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Select Housing Type --
+                                </option>
+
+                                <option value="House">
+                                    House
+                                </option>
+
+                                <option value="Apartment">
+                                    Apartment
+                                </option>
+
+                                <option value="Condominium">
+                                    Condominium
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="reason">
+                                Reason for Adoption
+                            </label>
+
+                            <textarea
+                                id="reason"
+                                name="reason"
+                                rows="4"
+                                placeholder="Why would you like to adopt this animal?"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="experience">
+                                Previous Animal Experience
+                            </label>
+
+                            <textarea
+                                id="experience"
+                                name="experience"
+                                rows="4"
+                                placeholder="Tell us about your previous experience caring for animals."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==============================
+                         AGREEMENT
+                    ============================== -->
+
+                    <div class="form-agreement">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="agreement"
+                                name="agreement"
+                                required
+                            >
+
+                            I confirm that the information I provided
+                            is accurate and that I am willing to provide
+                            proper care and a responsible home for the
+                            adopted animal.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        id="applicationSuccess"
+                        class="application-success"
+                        style="display: none;"
+                    >
+                        Your adoption application has been submitted
+                        successfully.
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <div class="form-submit">
+
+                        <button
+                            type="submit"
+                            class="btn-primary"
+                        >
+                            Submit Adoption Application
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Animal Adoption and Care System
+            </p>
+
+            <p>
+                Passi City • Animal Welfare and Adoption
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

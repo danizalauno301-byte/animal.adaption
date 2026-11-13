@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopter Registration | Animal Care System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+
+    
+</head>
+
+<body class="auth-page">
+
+    <main class="adopter-auth-container">
+        <section class="adopter-auth-card">
+
+            <h1>Create an Adopter Account</h1>
+            <p>
+                Register an account to apply for animal adoption
+                through our Animal Adoption and Care System.
+            </p>
+
+            <form id="adopterRegisterForm">
+
+                <label for="adopterFullName">Full Name</label>
+                <input
+                    type="text"
+                    id="adopterFullName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="adopterEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="adopterEmail"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <label for="adopterPhone">Contact Number</label>
+                <input
+                    type="tel"
+                    id="adopterPhone"
+                    placeholder="Enter your contact number"
+                    required
+                >
+
+                <label for="adopterUsername">Username</label>
+                <input
+                    type="text"
+                    id="adopterUsername"
+                    placeholder="Create a username"
+                    required
+                    minlength="4"
+                >
+
+                <label for="adopterPassword">Password</label>
+                <div class="password-input-wrapper">
+                    <input
+                        type="password"
+                        id="adopterPassword"
+                        placeholder="Create a password"
+                        required
+                        minlength="6"
+                    >
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-controls="adopterPassword"
+                        aria-label="Show password"
+                        aria-pressed="false"
+                    >Show</button>
+                </div>
+
+                <label for="adopterConfirmPassword">Confirm Password</label>
+                <div class="password-input-wrapper">
+                    <input
+                        type="password"
+                        id="adopterConfirmPassword"
+                        placeholder="Re-enter your password"
+                        required
+                        minlength="6"
+                    >
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-controls="adopterConfirmPassword"
+                        aria-label="Show password"
+                        aria-pressed="false"
+                    >Show</button>
+                </div>
+
+                <button type="submit">Register Account</button>
+
+                <div
+                    id="adopterRegisterMessage"
+                    class="auth-message"
+                    role="alert"
+                ></div>
+
+            </form>
+
+            <div class="auth-links">
+                Already have an account?
+                <a href="adopter-login.html">Log in here</a>
+                <br><br>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="password-toggle.js"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Available Animals - Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <span class="logo-icon">🐾</span>
+
+                <div>
+                    <h2>Animal Adoption</h2>
+                    <small>and Care System</small>
+                </div>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="animals.html" class="active">
+                        Animals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="adoption.html">
+                        Adoption
+                    </a>
+                </li>
+
+                <li>
+                    <a href="care.html">
+                        Care & Medical
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="adopter-login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <header class="page-header">
+
+        <div class="container">
+
+            <span class="page-label">
+                ANIMAL ADOPTION
+            </span>
+
+            <h1>
+                Available Animals
+            </h1>
+
+            <p>
+                Browse animals that are currently available
+                for responsible adoption.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container animals-page">
+
+
+        <!-- =========================
+             AVAILABLE ANIMAL CONTROLS
+        ========================== -->
+
+        <section class="animal-controls">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="animalSearch"
+                    placeholder="Search animal name..."
+                >
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <select id="animalType">
+
+                    <option value="all">
+                        All Animals
+                    </option>
+
+                    <option value="dog">
+                        Dogs
+                    </option>
+
+                    <option value="cat">
+                        Cats
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             AVAILABLE ANIMALS
+        ========================== -->
+
+        <section class="animal-records-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        AVAILABLE FOR ADOPTION
+                    </span>
+
+                    <h2>
+                        Meet Our Animals
+                    </h2>
+
+                    <p>
+                        Find a loving companion and learn more
+                        about each animal before applying.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="animal-grid"
+                id="animalList"
+            >
+
+
+                <!-- BUDDY -->
+
+                <article
+                    class="animal-item"
+                    data-name="Buddy"
+                    data-type="dog"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐶
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Buddy
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Dog • 2 years • Male
+                        </p>
+
+
+                        <p class="animal-description">
+                            Friendly and playful. Buddy is
+                            vaccinated and ready for a loving home.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=buddy"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LUNA -->
+
+                <article
+                    class="animal-item"
+                    data-name="Luna"
+                    data-type="cat"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐱
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Luna
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Cat • 1 year • Female
+                        </p>
+
+
+                        <p class="animal-description">
+                            Gentle and affectionate. Luna enjoys
+                            quiet environments and caring families.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=luna"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MAX -->
+
+                <article
+                    class="animal-item"
+                    data-name="Max"
+                    data-type="dog"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐕
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Max
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Dog • 3 years • Male
+                        </p>
+
+
+                        <p class="animal-description">
+                            Active and energetic. Max enjoys
+                            playing and outdoor activities.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=max"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- BELLA -->
+
+                <article
+                    class="animal-item"
+                    data-name="Bella"
+                    data-type="cat"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐱
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Bella
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Cat • 2 years • Female
+                        </p>
+
+
+                        <p class="animal-description">
+                            Affectionate and calm. Bella is
+                            receiving special care and monitoring.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                🩺 Special Care
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=bella"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- NO SEARCH RESULTS -->
+
+            <div
+                id="noResults"
+                class="no-animal-records"
+                style="display: none;"
+            >
+
+                <div class="no-animal-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    No Animals Found
+                </h3>
+
+                <p>
+                    Try searching for another animal or
+                    changing the animal type.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+                        🐾 Animal Adoption and Care System
+                    </h3>
+
+                    <p>
+                        Supporting responsible animal adoption
+                        and proper animal care.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        © 2026 Animal Adoption and Care System
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+</body>
+
+</html>

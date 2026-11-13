@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                🐾 Animal Adoption & Care
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="animal-management.html">Animals</a></li>
+                <li><a href="admin-care.html">Care &amp; Medical</a></li>
+                <li><a href="#applicationSection">Applications</a></li>
+                <li><a href="#appointmentsSection">Appointments</a></li>
+                <li><a href="#adoptersSection">Adopters</a></li>
+                <li><a href="#" id="logoutLink">Logout</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Staff Dashboard</h1>
+            <p>Manage animal records, adoption applications, medical records, and system activities.</p>
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="container">
+
+        <!-- ================= WELCOME ================= -->
+        <section class="dashboard-welcome">
+            <div>
+                <h2 id="dashboardWelcome">Welcome, Staff!</h2>
+                <p>
+                    Manage the Animal Adoption and Care System from this dashboard.
+                    You can monitor animals, applications, medical records, and staff accounts.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+        <section class="dashboard-stats">
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">🐾</div>
+                <div>
+                    <h3 id="totalAnimals">0</h3>
+                    <p>Total Animals</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">🏠</div>
+                <div>
+                    <h3 id="availableAnimals">0</h3>
+                    <p>Available Animals</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">📋</div>
+                <div>
+                    <h3 id="pendingApplications">0</h3>
+                    <p>Pending Applications</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">❤️</div>
+                <div>
+                    <h3 id="medicalMonitoring">0</h3>
+                    <p>Medical Monitoring</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">📅</div>
+                <div>
+                    <h3 id="pendingAppointments">0</h3>
+                    <p>Pending Appointments</p>
+                </div>
+            </div>
+
+            <div class="dashboard-stat-card">
+                <div class="dashboard-stat-icon">👥</div>
+                <div>
+                    <h3 id="totalAdopters">0</h3>
+                    <p>Registered Adopters</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= SYSTEM MODULES ================= -->
+        <section class="dashboard-section">
+
+            <div class="section-title">
+                <h2>System Modules</h2>
+                <p>Access the main management features of the system.</p>
+            </div>
+
+            <div class="dashboard-module-grid">
+
+                <a href="animal-management.html" class="dashboard-module-card">
+                    <div class="module-icon">🐶</div>
+                    <h3>Animal Records</h3>
+                    <p>
+                        Add, update, search, and manage animal information.
+                    </p>
+                </a>
+
+                <a href="#applicationSection" class="dashboard-module-card">
+                    <div class="module-icon">📋</div>
+                    <h3>Adoption Applications</h3>
+                    <p>
+                        Review and manage submitted adoption applications.
+                    </p>
+                </a>
+
+                <a href="care.html" class="dashboard-module-card">
+                    <div class="module-icon">🩺</div>
+                    <h3>Medical Records</h3>
+                    <p>
+                        Monitor animal health, vaccination, and treatment records.
+                    </p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADOPTION APPLICATIONS ================= -->
+        <section class="dashboard-section" id="applicationSection">
+
+            <div class="section-title">
+                <h2>Adoption Applications</h2>
+                <p>Review applications submitted by prospective adopters.</p>
+            </div>
+
+            <div id="applicationList" class="application-list">
+                <!-- Applications will be displayed by JavaScript -->
+            </div>
+
+            <div id="noApplications" class="empty-state">
+                <div class="empty-icon">📋</div>
+                <h3>No Adoption Applications</h3>
+                <p>
+                    There are currently no adoption applications in the system.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPOINTMENTS ================= -->
+        <section class="dashboard-section" id="appointmentsSection">
+
+            <div class="section-title">
+                <h2>Appointment Requests</h2>
+                <p>Review adoption meeting requests submitted by registered adopters.</p>
+            </div>
+
+            <div id="appointmentList" class="application-list">
+                <!-- Appointment requests will be displayed by JavaScript -->
+            </div>
+
+            <div id="noAppointments" class="empty-state">
+                <div class="empty-icon">📅</div>
+                <h3>No Appointment Requests</h3>
+                <p>Appointment requests from adopters will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADOPTERS ================= -->
+        <section class="dashboard-section" id="adoptersSection">
+
+            <div class="section-title">
+                <h2>Registered Adopters</h2>
+                <p>Accounts created by people who want to adopt an animal.</p>
+            </div>
+
+            <div id="adopterList" class="application-list">
+                <!-- Registered adopters will be displayed by JavaScript -->
+            </div>
+
+            <div id="noAdopters" class="empty-state">
+                <div class="empty-icon">👥</div>
+                <h3>No Registered Adopters</h3>
+                <p>Adopter accounts will appear here after registration.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORTS ================= -->
+        <section class="dashboard-section reports-section" id="reports">
+
+            <div class="section-title">
+                <h2>Reports</h2>
+                <p>Summary of the current records in the system.</p>
+            </div>
+
+
+            <!-- ANIMAL REPORT -->
+            <div class="report-box">
+
+                <div class="report-header">
+                    <h3>🐾 Animal Summary</h3>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-item">
+                        <span>Total Animals</span>
+                        <strong id="reportTotalAnimals">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Available</span>
+                        <strong id="reportAvailableAnimals">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Adopted</span>
+                        <strong id="reportAdoptedAnimals">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Pending</span>
+                        <strong id="reportPendingAnimals">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEDICAL REPORT -->
+            <div class="report-box">
+
+                <div class="report-header">
+                    <h3>🩺 Medical Summary</h3>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-item">
+                        <span>Total Medical Records</span>
+                        <strong id="reportMedicalTotal">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Healthy</span>
+                        <strong id="reportHealthy">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Under Treatment</span>
+                        <strong id="reportTreatment">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Monitoring</span>
+                        <strong id="reportMonitoring">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADOPTION REPORT -->
+            <div class="report-box">
+
+                <div class="report-header">
+                    <h3>📋 Adoption Summary</h3>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-item">
+                        <span>Total Applications</span>
+                        <strong id="reportApplications">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Pending</span>
+                        <strong id="reportPendingApplications">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Approved</span>
+                        <strong id="reportApprovedApplications">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Rejected</span>
+                        <strong id="reportRejectedApplications">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPOINTMENT REPORT -->
+            <div class="report-box">
+
+                <div class="report-header">
+                    <h3>📅 Appointment Summary</h3>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-item">
+                        <span>Total Appointments</span>
+                        <strong id="reportAppointments">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Pending</span>
+                        <strong id="reportPendingAppointments">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Approved</span>
+                        <strong id="reportApprovedAppointments">0</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Completed</span>
+                        <strong id="reportCompletedAppointments">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="report-actions">
+                <button type="button" id="printReport" class="btn-primary">
+                    🖨️ Print Report
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ================= USER MANAGEMENT ================= -->
+        <section class="dashboard-section user-management-section">
+
+            <div class="section-title">
+                <h2>User Management</h2>
+                <p>
+                    Manage staff accounts that are allowed to access the system.
+                </p>
+            </div>
+
+
+            <!-- ADD STAFF ACCOUNT -->
+            <div class="user-form-box">
+
+                <div class="user-form-header">
+                    <div>
+                        <h3>➕ Add Staff Account</h3>
+                        <p>Create a new account for authorized staff.</p>
+                    </div>
+                </div>
+
+                <form id="userForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="newUsername">Username</label>
+
+                            <input
+                                type="text"
+                                id="newUsername"
+                                placeholder="Enter username"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="newPassword">Password</label>
+
+                            <input
+                                type="password"
+                                id="newPassword"
+                                placeholder="Enter password"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="btn-primary">
+                        ➕ Add Staff Account
+                    </button>
+
+                </form>
+
+
+                <div id="userSuccess" class="success-message"></div>
+
+            </div>
+
+
+            <!-- STAFF ACCOUNT LIST -->
+            <div class="user-list-box">
+
+                <div class="user-list-header">
+                    <div>
+                        <h3>👥 Staff Accounts</h3>
+                        <p>Accounts currently registered in the system.</p>
+                    </div>
+                </div>
+
+
+                <div id="userList" class="user-list">
+
+                    <!-- Staff accounts will be displayed by JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT ACTIVITIES ================= -->
+        <section class="dashboard-section">
+
+            <div class="section-title">
+                <h2>Recent Activities</h2>
+                <p>Quick overview of system activities.</p>
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+                    <div class="activity-icon">🐾</div>
+
+                    <div>
+                        <h4>Animal Records</h4>
+                        <p>
+                            Animal information can be added, edited, searched, and managed.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="activity-item">
+                    <div class="activity-icon">📋</div>
+
+                    <div>
+                        <h4>Adoption Applications</h4>
+                        <p>
+                            Submitted applications can be reviewed and updated.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="activity-item">
+                    <div class="activity-icon">🩺</div>
+
+                    <div>
+                        <h4>Medical Monitoring</h4>
+                        <p>
+                            Animal health and medical information can be monitored.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="activity-item">
+                    <div class="activity-icon">👥</div>
+
+                    <div>
+                        <h4>User Management</h4>
+                        <p>
+                            Authorized staff accounts can be added and managed.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Animal Adoption and Care System
+            </p>
+
+            <p>
+                School-Based System Project
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="database.js?v=final-20261113"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+</body>
+</html>

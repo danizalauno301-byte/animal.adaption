@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+
+    
+</head>
+
+<body class="admin-auth-page">
+
+    <main class="admin-register-container">
+
+        <section class="admin-register-card">
+
+            <h1>Create Admin Account</h1>
+
+            <p>
+                Register the first administrator account
+                to manage the Animal Adoption and Care System.
+            </p>
+
+            <form id="adminRegisterForm">
+
+                <div class="form-group">
+                    <label for="adminFullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="adminFullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Create a username"
+                        minlength="4"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <div class="password-input-wrapper">
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Create a password"
+                            minlength="6"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            aria-controls="adminPassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >Show</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminConfirmPassword">
+                        Confirm Password
+                    </label>
+                    <div class="password-input-wrapper">
+                        <input
+                            type="password"
+                            id="adminConfirmPassword"
+                            placeholder="Re-enter your password"
+                            minlength="6"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            aria-controls="adminConfirmPassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >Show</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-button">
+                    Register as Administrator
+                </button>
+
+                <div
+                    id="adminRegisterMessage"
+                    class="register-message"
+                    role="alert"
+                ></div>
+
+            </form>
+
+            <div class="auth-links">
+                <a href="login.html">Go to Staff Login</a>
+                <br><br>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="password-toggle.js"></script>
+    <script>
+        const adminRegisterForm =
+            document.getElementById("adminRegisterForm");
+
+        const adminRegisterMessage =
+            document.getElementById("adminRegisterMessage");
+
+        function showAdminMessage(message, success) {
+            adminRegisterMessage.textContent = message;
+            adminRegisterMessage.style.display = "block";
+            adminRegisterMessage.style.background =
+                success ? "#DAF1DE" : "#FCE8E6";
+            adminRegisterMessage.style.color =
+                success ? "#163832" : "#9B2424";
+        }
+
+        async function guardAdminRegistration() {
+            try {
+                await window.databaseReady;
+                const result = await window.databaseRequest("api.php", {
+                    method: "POST",
+                    body: JSON.stringify({ action: "staff-status" })
+                });
+
+                if (result.exists) {
+                    showAdminMessage(
+                        "A staff account already exists. Redirecting to Staff Login...",
+                        false
+                    );
+                    Array.from(adminRegisterForm.querySelectorAll("input, button")).forEach(function (element) {
+                        element.disabled = true;
+                    });
+                    setTimeout(function () {
+                        window.location.href = "login.html";
+                    }, 1200);
+                }
+            } catch (error) {
+                console.error("Unable to check admin account state:", error);
+            }
+        }
+
+        guardAdminRegistration();
+
+        adminRegisterForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const fullName =
+                document.getElementById("adminFullName").value.trim();
+
+            const username =
+                document.getElementById("adminUsername").value.trim();
+
+            const password =
+                document.getElementById("adminPassword").value;
+
+            const confirmPassword =
+                document.getElementById("adminConfirmPassword").value;
+
+            if (password !== confirmPassword) {
+                showAdminMessage("Passwords do not match.", false);
+                return;
+            }
+
+            if (password.length < 6) {
+                showAdminMessage(
+                    "Password must contain at least 6 characters.",
+                    false
+                );
+                return;
+            }
+
+            try {
+                await window.databaseReady;
+                await window.databaseRequest("api.php", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        action: "staff-register",
+                        fullName: fullName,
+                        username: username,
+                        password: password
+                    })
+                });
+                showAdminMessage(
+                    "Administrator account created successfully. Redirecting to the dashboard...",
+                    true
+                );
+                adminRegisterForm.reset();
+                try {
+                    await window.importLegacyData();
+                } catch (importError) {
+                    console.error("Could not import legacy browser records:", importError);
+                }
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 1000);
+            } catch (error) {
+                showAdminMessage(error.message, false);
+            }
+        });
+    </script>
+  
+</body>
+</html>

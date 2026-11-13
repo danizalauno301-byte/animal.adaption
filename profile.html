@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Animal Adoption and Care System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+
+    
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🐾 Animal Care</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="animals.html">Animals</a>
+                <a href="adoption.html">Adoption</a>
+                <a href="care.html">Care & Medical</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+
+        <section class="profile-card">
+
+            <div class="profile-heading">
+
+                <div class="profile-avatar" id="profileAvatar">A</div>
+
+                <div>
+                    <h1 id="profileName">Adopter Name</h1>
+                    <p id="profileUsernameDisplay">@username</p>
+                    <span class="profile-status">Registered Adopter</span>
+                </div>
+
+            </div>
+
+            <div class="profile-content">
+
+                <section class="profile-section">
+
+                    <h2>Personal Information</h2>
+
+                    <form id="profileForm">
+
+                        <div class="profile-grid">
+
+                            <div class="profile-field">
+                                <label for="profileFullName">Full Name</label>
+                                <input type="text" id="profileFullName" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profileEmail">Email Address</label>
+                                <input type="email" id="profileEmail" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profilePhone">Contact Number</label>
+                                <input type="tel" id="profilePhone" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profileUsernameInput">Username</label>
+                                <input type="text" id="profileUsernameInput"
+                                       minlength="4" required disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+
+                            <button type="button" class="primary-profile-btn"
+                                    id="editProfileBtn">
+                                Edit Profile
+                            </button>
+
+                            <button type="submit" class="primary-profile-btn"
+                                    id="saveProfileBtn" style="display:none;">
+                                Save Changes
+                            </button>
+
+                            <button type="button" class="secondary-profile-btn"
+                                    id="cancelProfileBtn" style="display:none;">
+                                Cancel
+                            </button>
+
+                        </div>
+
+                        <p class="profile-message" id="profileMessage"></p>
+
+                    </form>
+
+                </section>
+
+                <section class="profile-section">
+
+                    <h2>Account Settings</h2>
+
+                    <form id="passwordForm">
+
+                        <div class="profile-grid">
+
+                            <div class="profile-field">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword"
+                                       minlength="6" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="confirmNewPassword">Confirm New Password</label>
+                                <input type="password" id="confirmNewPassword"
+                                       minlength="6" required>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+                            <button type="submit" class="primary-profile-btn">
+                                Change Password
+                            </button>
+                        </div>
+
+                        <p class="profile-message" id="passwordMessage"></p>
+
+                    </form>
+
+                </section>
+
+                <section class="profile-section">
+                    <h2>My Adoption Applications</h2>
+                    <div id="profileApplicationList" class="profile-record-list">
+                        <p class="profile-empty">Loading applications...</p>
+                    </div>
+                </section>
+
+                <section class="profile-section">
+                    <h2>Notifications</h2>
+                    <div id="profileNotifications" class="profile-record-list">
+                        <p class="profile-empty">No new notifications.</p>
+                    </div>
+                </section>
+
+                <section class="profile-section">
+                    <h2>Request an Appointment</h2>
+                    <p class="profile-help">
+                        Request a meeting with the shelter staff about an adoption.
+                    </p>
+
+                    <form id="appointmentRequestForm">
+                        <div class="profile-grid">
+                            <div class="profile-field">
+                                <label for="appointmentAnimal">Animal</label>
+                                <select id="appointmentAnimal" required>
+                                    <option value="">Select an animal</option>
+                                </select>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="appointmentDate">Preferred Date</label>
+                                <input type="date" id="appointmentDate" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="appointmentTime">Preferred Time</label>
+                                <input type="time" id="appointmentTime" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="appointmentNotes">Notes</label>
+                                <textarea id="appointmentNotes" rows="3" placeholder="Optional message for the staff"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="profile-actions">
+                            <button type="submit" class="primary-profile-btn">
+                                Submit Appointment Request
+                            </button>
+                        </div>
+
+                        <p class="profile-message" id="appointmentMessage"></p>
+                    </form>
+
+                    <h3 class="profile-subheading">My Appointment Requests</h3>
+                    <div id="profileAppointmentList" class="profile-record-list">
+                        <p class="profile-empty">No appointment requests yet.</p>
+                    </div>
+                </section>
+
+                <a href="index.html" class="back-home">← Back to Home</a>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            try {
+                await window.databaseReady;
+                const session = await window.databaseRequest("api.php?action=auth-status");
+                if (session.role !== "adopter" || !session.user) {
+                    window.location.href = "adopter-login.html";
+                    return;
+                }
+
+                let adopter = session.user;
+                const fullNameInput = document.getElementById("profileFullName");
+                const emailInput = document.getElementById("profileEmail");
+                const phoneInput = document.getElementById("profilePhone");
+                const usernameInput = document.getElementById("profileUsernameInput");
+                const editBtn = document.getElementById("editProfileBtn");
+                const saveBtn = document.getElementById("saveProfileBtn");
+                const cancelBtn = document.getElementById("cancelProfileBtn");
+                const profileMessage = document.getElementById("profileMessage");
+
+                function loadProfile() {
+                    fullNameInput.value = adopter.fullName || "";
+                    emailInput.value = adopter.email || "";
+                    phoneInput.value = adopter.phone || "";
+                    usernameInput.value = adopter.username || "";
+                    document.getElementById("profileName").textContent =
+                        adopter.fullName || "Adopter";
+                    document.getElementById("profileUsernameDisplay").textContent =
+                        "@" + (adopter.username || "");
+                    const initials = (adopter.fullName || "A")
+                        .trim()
+                        .split(/\s+/)
+                        .map(word => word[0])
+                        .join("")
+                        .substring(0, 2)
+                        .toUpperCase();
+                    document.getElementById("profileAvatar").textContent = initials;
+                }
+
+                function setEditMode(enabled) {
+                    fullNameInput.disabled = !enabled;
+                    emailInput.disabled = !enabled;
+                    phoneInput.disabled = !enabled;
+                    usernameInput.disabled = !enabled;
+                    editBtn.style.display = enabled ? "none" : "inline-block";
+                    saveBtn.style.display = enabled ? "inline-block" : "none";
+                    cancelBtn.style.display = enabled ? "inline-block" : "none";
+                }
+
+                loadProfile();
+                editBtn.addEventListener("click", function () {
+                    profileMessage.textContent = "";
+                    setEditMode(true);
+                });
+                cancelBtn.addEventListener("click", function () {
+                    loadProfile();
+                    setEditMode(false);
+                    profileMessage.textContent = "";
+                });
+
+                document.getElementById("profileForm").addEventListener("submit", async function (event) {
+                    event.preventDefault();
+                    const fields = {
+                        fullName: fullNameInput.value.trim(),
+                        email: emailInput.value.trim().toLowerCase(),
+                        phone: phoneInput.value.trim(),
+                        username: usernameInput.value.trim()
+                    };
+                    if (!fields.fullName || !fields.email || !fields.phone || !fields.username) {
+                        profileMessage.textContent = "Please complete all fields.";
+                        return;
+                    }
+                    if (fields.username.length < 4) {
+                        profileMessage.textContent = "Username must contain at least 4 characters.";
+                        return;
+                    }
+                    try {
+                        const result = await window.databaseRequest("api.php", {
+                            method: "POST",
+                            body: JSON.stringify(Object.assign({ action: "adopter-profile-update" }, fields))
+                        });
+                        adopter = result.user;
+                        loadProfile();
+                        setEditMode(false);
+                        profileMessage.textContent = "Profile updated successfully.";
+                    } catch (error) {
+                        profileMessage.textContent = error.message;
+                    }
+                });
+
+                document.getElementById("passwordForm").addEventListener("submit", async function (event) {
+                    event.preventDefault();
+                    const currentPassword = document.getElementById("currentPassword").value;
+                    const newPassword = document.getElementById("newPassword").value;
+                    const confirmNewPassword = document.getElementById("confirmNewPassword").value;
+                    const message = document.getElementById("passwordMessage");
+                    if (newPassword.length < 6) {
+                        message.textContent = "New password must contain at least 6 characters.";
+                        return;
+                    }
+                    if (newPassword !== confirmNewPassword) {
+                        message.textContent = "New passwords do not match.";
+                        return;
+                    }
+                    try {
+                        const result = await window.databaseRequest("api.php", {
+                            method: "POST",
+                            body: JSON.stringify({
+                                action: "adopter-password-update",
+                                currentPassword: currentPassword,
+                                newPassword: newPassword
+                            })
+                        });
+                        this.reset();
+                        message.textContent = result.message;
+                    } catch (error) {
+                        message.textContent = error.message;
+                    }
+                });
+            } catch (error) {
+                console.error("Could not load adopter profile:", error);
+            }
+        });
+    </script>
+
+</body>
+</html>

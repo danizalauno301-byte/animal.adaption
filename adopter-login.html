@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopter Login | Animal Care System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+
+    
+</head>
+
+<body class="auth-page">
+
+    <main class="adopter-auth-container">
+        <section class="adopter-auth-card">
+
+            <h1>Adopter Login</h1>
+            <p>
+                Log in to your adopter account to continue
+                with your animal adoption application.
+            </p>
+
+            <form id="adopterLoginForm">
+
+                <label for="adopterLoginUsername">Username</label>
+                <input
+                    type="text"
+                    id="adopterLoginUsername"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="adopterLoginPassword">Password</label>
+                <div class="password-input-wrapper">
+                    <input
+                        type="password"
+                        id="adopterLoginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-controls="adopterLoginPassword"
+                        aria-label="Show password"
+                        aria-pressed="false"
+                    >Show</button>
+                </div>
+
+                <button type="submit">Log In</button>
+
+                <div
+                    id="adopterLoginMessage"
+                    class="auth-message"
+                    role="alert"
+                ></div>
+
+            </form>
+
+            <div class="auth-links">
+                Don't have an account?
+                <a href="register.html">Register here</a>
+                <br><br>
+                <a href="index.html">Back to Home</a>
+                <br><br>
+                <a href="login.html">Staff Login</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="password-toggle.js"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A caring animal adoption and veterinary care platform helping rescued animals find safe, loving homes.">
+
+    <title>Paws &amp; Hearts | Animal Adoption and Care</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css?v=20261113">
+</head>
+
+<body class="home-page">
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="brand-lockup">
+                    <span>
+                        <span class="brand-name">Paws &amp; Hearts</span>
+                        <small>Animal Adoption &amp; Care</small>
+                    </span>
+                </span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="animals.html">Meet the Animals</a>
+                <a href="adoption.html">Adopt</a>
+                <a href="care.html">Care &amp; Medical</a>
+                <a href="about.html">About Us</a>
+                <a href="login.html">Staff Login</a>
+                <a href="adopter-login.html">Adopter Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-home">
+        <div class="hero-home-grid">
+
+            <div class="hero-home-copy">
+                <span class="hero-label">A SAFE START, A LOVING HOME</span>
+
+                <h1>
+                    Give them a home.<br>
+                    Give them <em>care.</em>
+                </h1>
+
+                <p>
+                    Every rescued animal deserves a second chance. Meet the dogs and cats
+                    waiting for a family, learn their stories, and begin a responsible
+                    adoption with guidance from our shelter care team.
+                </p>
+
+                <div class="hero-home-actions">
+                    <a href="animals.html" class="primary-button">Browse Adoptable Animals →</a>
+                    <a href="adoption.html" class="secondary-button">Start an Application</a>
+                </div>
+
+                <div class="hero-trust">
+                    <span>Health-checked animals</span>
+                    <span>Guided adoption process</span>
+                    <span>Care-first shelter</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-photo-frame">
+                    <img src="assets/images/dog-hero.jpg" alt="A happy rescue dog waiting for adoption">
+                </div>
+
+                <div class="hero-float-card hero-card-one">
+                    <span class="hero-float-icon">🩺</span>
+                    <span>
+                        <strong>Care &amp; medical records</strong>
+                        <small>Health and vaccination tracking</small>
+                    </span>
+                </div>
+
+                <div class="hero-float-card hero-card-two">
+                    <span class="hero-float-icon">🏡</span>
+                    <span>
+                        <strong>Responsible adoption</strong>
+                        <small>Matching animals with loving homes</small>
+                    </span>
+                </div>
+
+                <div class="hero-paw-badge">
+                    <span>🐾</span>
+                    ADOPT<br>WITH LOVE
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= QUICK STATS ================= -->
+    <div class="home-stats">
+        <div class="home-stat">
+            <strong id="homeAnimalCount">2</strong>
+            <span>Animals in our care</span>
+        </div>
+
+        <div class="home-stat">
+            <strong id="homeAvailableCount">2</strong>
+            <span>Ready for adoption</span>
+        </div>
+
+        <div class="home-stat">
+            <strong id="homeCareCount">0</strong>
+            <span>Care records kept</span>
+        </div>
+
+        <div class="home-stat">
+            <strong>1:1</strong>
+            <span>Adoption guidance</span>
+        </div>
+    </div>
+
+
+    <!-- ================= FEATURED ANIMALS ================= -->
+    <section class="home-section" id="featured">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-label">MEET OUR FRIENDS</span>
+                <h2>Someone Here Is Waiting for You</h2>
+                <p>
+                    These animals are currently available for adoption. Take your time,
+                    read their stories, and find the companion who fits your home.
+                </p>
+            </div>
+
+            <div class="animal-grid featured-grid" id="featuredAnimalList">
+                <article class="animal-item featured-animal-card">
+                    <div class="animal-image">
+                        <img src="assets/images/dog-1.jpg" alt="Straby, a friendly dog" class="public-animal-image" loading="lazy">
+                        <span class="animal-status status-available">Available</span>
+                    </div>
+                    <div class="animal-card-content">
+                        <div class="animal-card-top">
+                            <h3>Straby</h3>
+                        </div>
+                        <p class="animal-type">Dog &bull; 3 &bull; Female</p>
+                        <p class="animal-description">
+                            A gentle, affectionate dog who enjoys being close to people
+                            and is ready for a caring home.
+                        </p>
+                        <div class="animal-info">
+                            <span>Healthy</span>
+                            <span>Up to date</span>
+                        </div>
+                        <a href="animal-detail.html?animal=1" class="view-animal-btn">Meet Straby</a>
+                    </div>
+                </article>
+
+                <article class="animal-item featured-animal-card">
+                    <div class="animal-image">
+                        <img src="assets/images/cat-1.jpg" alt="Luna, a calm cat" class="public-animal-image" loading="lazy">
+                        <span class="animal-status status-available">Available</span>
+                    </div>
+                    <div class="animal-card-content">
+                        <div class="animal-card-top">
+                            <h3>Luna</h3>
+                        </div>
+                        <p class="animal-type">Cat &bull; 7 &bull; Female</p>
+                        <p class="animal-description">
+                            A calm and loving cat with a quiet charm, looking for a
+                            patient family and a peaceful place to call home.
+                        </p>
+                        <div class="animal-info">
+                            <span>Healthy</span>
+                            <span>Vaccinated</span>
+                        </div>
+                        <a href="animal-detail.html?animal=3" class="view-animal-btn">Meet Luna</a>
+                    </div>
+                </article>
+
+                <a class="featured-cta-card" href="animals.html">
+                    <span class="featured-cta-icon">🐾</span>
+                    <strong>There are more friends waiting.</strong>
+                    <span>Browse every animal looking for a loving home.</span>
+                    <em>View all animals →</em>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= HOW ADOPTION WORKS ================= -->
+    <section class="home-section is-tinted">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-label">HOW IT WORKS</span>
+                <h2>A Thoughtful Adoption Journey</h2>
+                <p>
+                    Adoption is a commitment. Our process is simple, transparent, and
+                    focused on the wellbeing of both the animal and the adopter.
+                </p>
+            </div>
+
+            <div class="how-grid">
+                <article class="how-card">
+                    <span class="how-number">01</span>
+                    <h3>Meet the animals</h3>
+                    <p>Browse profiles and learn about each animal's personality, health, and care needs.</p>
+                </article>
+
+                <article class="how-card">
+                    <span class="how-number">02</span>
+                    <h3>Submit an application</h3>
+                    <p>Tell us about your home, lifestyle, and why you would like to adopt.</p>
+                </article>
+
+                <article class="how-card">
+                    <span class="how-number">03</span>
+                    <h3>Talk with our team</h3>
+                    <p>Staff review your application and may request a meeting or appointment.</p>
+                </article>
+
+                <article class="how-card">
+                    <span class="how-number">04</span>
+                    <h3>Welcome them home</h3>
+                    <p>Once approved, receive guidance for a safe, calm, and caring transition.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= WELFARE / RESPONSIBLE OWNERSHIP ================= -->
+    <section class="home-section">
+        <div class="container welfare-layout">
+            <div class="welfare-photo">
+                <img src="assets/images/care-hero.jpg" alt="Veterinary care for a shelter animal" loading="lazy">
+                <div class="welfare-photo-card">
+                    <strong>Care comes first.</strong>
+                    <span>Health checks, vaccinations, and daily monitoring are part of every animal's journey.</span>
+                </div>
+            </div>
+
+            <div class="welfare-copy">
+                <span class="section-label">ANIMAL WELFARE</span>
+                <h2>Responsible Adoption Starts with Care</h2>
+                <p>
+                    A loving home is more than affection. It is patience, routine, proper
+                    nutrition, veterinary care, and a safe environment. We help adopters
+                    understand what each animal truly needs.
+                </p>
+
+                <ul class="welfare-list">
+                    <li>Health and vaccination information is recorded and reviewed before adoption.</li>
+                    <li>Adopters are encouraged to choose an animal that matches their space and lifestyle.</li>
+                    <li>Every application is reviewed with the animal's wellbeing as the priority.</li>
+                    <li>Post-adoption guidance helps families support a smooth transition.</li>
+                </ul>
+
+                <a href="care.html" class="secondary-button">See Care &amp; Medical Records</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PET CARE TIPS ================= -->
+    <section class="home-section is-tinted">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-label">PET CARE NOTES</span>
+                <h2>Small Habits, Better Lives</h2>
+                <p>Simple practices that help every adopted animal feel safe, healthy, and loved.</p>
+            </div>
+
+            <div class="tips-grid-home">
+                <article class="tip-home">
+                    <span class="tip-home-icon">🥣</span>
+                    <h3>Balanced nutrition</h3>
+                    <p>Feed age-appropriate food, keep fresh water available, and avoid sudden diet changes.</p>
+                </article>
+
+                <article class="tip-home">
+                    <span class="tip-home-icon">🩺</span>
+                    <h3>Routine veterinary care</h3>
+                    <p>Keep vaccinations current and schedule regular checkups, especially in the first weeks.</p>
+                </article>
+
+                <article class="tip-home">
+                    <span class="tip-home-icon">🧸</span>
+                    <h3>Patience and play</h3>
+                    <p>Give animals time to adjust, provide gentle exercise, and build trust through routine.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="home-section" id="about">
+        <div class="container home-about">
+            <div class="home-about-copy">
+                <span class="section-label">ABOUT PAWS &amp; HEARTS</span>
+                <h2>An Animal Welfare Platform, Not Just a Record System</h2>
+                <p>
+                    The Animal Adoption and Care System brings adoption applications,
+                    animal profiles, medical records, and daily care into one organized
+                    platform for shelter staff and adopters.
+                </p>
+                <p>
+                    It is built around a simple belief: every animal deserves a safe home,
+                    and every adoption deserves thoughtful preparation.
+                </p>
+
+                <div class="home-about-points">
+                    <div>
+                        <strong>Clear animal profiles</strong>
+                        <span>Photos, health details, and care information in one place.</span>
+                    </div>
+                    <div>
+                        <strong>Guided applications</strong>
+                        <span>Adopters can apply and follow their application status.</span>
+                    </div>
+                    <div>
+                        <strong>Care monitoring</strong>
+                        <span>Medical and daily care records stay organized for staff.</span>
+                    </div>
+                    <div>
+                        <strong>Responsible matching</strong>
+                        <span>Reviews focus on the long-term wellbeing of the animal.</span>
+                    </div>
+                </div>
+
+                <div class="hero-home-actions" style="margin-top: 24px; margin-bottom: 0;">
+                    <a href="about.html" class="primary-button">Learn More About Us</a>
+                </div>
+            </div>
+
+            <div class="home-about-media">
+                <img src="assets/images/dog-2.jpg" alt="A dog enjoying care at the shelter" loading="lazy">
+                <img src="assets/images/cat-2.jpg" alt="A calm cat waiting for a family" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="home-cta">
+        <div class="container home-cta-inner">
+            <div>
+                <h2>Ready to Meet Your New Best Friend?</h2>
+                <p>Start with a profile. Ask questions. Take the next step when it feels right.</p>
+            </div>
+            <a href="animals.html" class="primary-button">Meet the Animals →</a>
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="home-footer-grid">
+                <div>
+                    <div class="home-footer-brand">
+                        <span>🐾</span>
+                        Paws &amp; Hearts
+                    </div>
+                    <p style="margin-top: 14px;">
+                        A compassionate animal adoption and care platform for rescued
+                        dogs and cats in Passi City.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="animals.html">Adoptable animals</a></li>
+                        <li><a href="adoption.html">Adoption application</a></li>
+                        <li><a href="care.html">Care &amp; medical</a></li>
+                        <li><a href="about.html">About the system</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Adopters</h4>
+                    <ul>
+                        <li><a href="register.html">Create an account</a></li>
+                        <li><a href="adopter-login.html">Adopter login</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Care Reminder</h4>
+                    <p style="font-size: 13px; line-height: 1.8;">
+                        Adoption is a lifelong commitment. Choose an animal whose needs
+                        match your home, time, and budget.
+                    </p>
+                    <p style="margin-top: 12px;"><a href="login.html">Staff Access →</a></p>
+                </div>
+            </div>
+
+            <div class="home-footer-bottom">
+                <span>© 2026 Animal Adoption and Care System</span>
+                <span>Passi City • Animal Welfare and Adoption</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="database.js?v=final-20261113"></script>
+    <script src="script.js?v=final-20261113"></script>
+    <script src="enhance.js?v=20261113"></script>
+
+</body>
+
+</html>
