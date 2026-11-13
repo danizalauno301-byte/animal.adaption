@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #DAF1DE;
+            font-family: Arial, sans-serif;
+        }
+
+        .admin-register-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .admin-register-card {
+            background: #FFFFFF;
+            padding: 38px;
+            border: 1px solid #B7D5BD;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(5, 31, 32, 0.08);
+        }
+
+        .admin-register-card h1 {
+            color: #163832;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .admin-register-card p {
+            color: #52685B;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #235347;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px;
+            border: 1px solid #B7D5BD;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #235347;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .register-button:hover {
+            background: #163832;
+        }
+
+        .register-message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .auth-links {
+            text-align: center;
+            margin-top: 22px;
+        }
+
+        .auth-links a {
+            color: #235347;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 550px) {
+            .admin-register-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="admin-register-container">
+
+        <section class="admin-register-card">
+
+            <h1>Create Admin Account</h1>
+
+            <p>
+                Register the first administrator account
+                to manage the Animal Adoption and Care System.
+            </p>
+
+            <form id="adminRegisterForm">
+
+                <div class="form-group">
+                    <label for="adminFullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="adminFullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Create a username"
+                        minlength="4"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminConfirmPassword">
+                        Confirm Password
+                    </label>
+                    <input
+                        type="password"
+                        id="adminConfirmPassword"
+                        placeholder="Re-enter your password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="register-button">
+                    Register as Administrator
+                </button>
+
+                <div
+                    id="adminRegisterMessage"
+                    class="register-message"
+                    role="alert"
+                ></div>
+
+            </form>
+
+            <div class="auth-links">
+                <a href="login.html">Go to Staff Login</a>
+                <br><br>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const adminRegisterForm =
+            document.getElementById("adminRegisterForm");
+
+        const adminRegisterMessage =
+            document.getElementById("adminRegisterMessage");
+
+        function showAdminMessage(message, success) {
+            adminRegisterMessage.textContent = message;
+            adminRegisterMessage.style.display = "block";
+            adminRegisterMessage.style.background =
+                success ? "#DAF1DE" : "#FCE8E6";
+            adminRegisterMessage.style.color =
+                success ? "#163832" : "#9B2424";
+        }
+
+        function getAdminAccounts() {
+            try {
+                return JSON.parse(
+                    localStorage.getItem("animalCareUsers") || "[]"
+                );
+            } catch (error) {
+                return [];
+            }
+        }
+
+        adminRegisterForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const fullName =
+                document.getElementById("adminFullName").value.trim();
+
+            const username =
+                document.getElementById("adminUsername").value.trim();
+
+            const password =
+                document.getElementById("adminPassword").value;
+
+            const confirmPassword =
+                document.getElementById("adminConfirmPassword").value;
+
+            if (password !== confirmPassword) {
+                showAdminMessage("Passwords do not match.", false);
+                return;
+            }
+
+            if (password.length < 6) {
+                showAdminMessage(
+                    "Password must contain at least 6 characters.",
+                    false
+                );
+                return;
+            }
+
+            const users = getAdminAccounts();
+
+            const existingUsers = users.filter(function(user) {
+                return !(
+                    user.username === "admin" &&
+                    user.password === "admin123" &&
+                    user.role === "Administrator"
+                );
+            });
+
+            const adminAlreadyExists = existingUsers.some(function(user) {
+                return user.role === "Administrator";
+            });
+
+            if (adminAlreadyExists) {
+                showAdminMessage(
+                    "An administrator account already exists. Please use Staff Login.",
+                    false
+                );
+                return;
+            }
+
+            const usernameExists = existingUsers.some(function(user) {
+                return user.username.toLowerCase() === username.toLowerCase();
+            });
+
+            if (usernameExists) {
+                showAdminMessage(
+                    "This username is already taken. Choose another username.",
+                    false
+                );
+                return;
+            }
+
+            const newAdmin = {
+                id: Date.now(),
+                fullName: fullName,
+                username: username,
+                password: password,
+                role: "Administrator"
+            };
+
+            existingUsers.push(newAdmin);
+
+            localStorage.setItem(
+                "animalCareUsers",
+                JSON.stringify(existingUsers)
+            );
+
+            showAdminMessage(
+                "Administrator account created successfully! Redirecting to Staff Login...",
+                true
+            );
+
+            adminRegisterForm.reset();
+
+            setTimeout(function() {
+                window.location.href = "login.html";
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Available Animals - Animal Adoption and Care System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <span class="logo-icon">🐾</span>
+
+                <div>
+                    <h2>Animal Adoption</h2>
+                    <small>and Care System</small>
+                </div>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="animals.html" class="active">
+                        Animals
+                    </a>
+                </li>
+
+                <li>
+                    <a href="adoption.html">
+                        Adoption
+                    </a>
+                </li>
+
+                <li>
+                    <a href="care.html">
+                        Care & Medical
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <header class="page-header">
+
+        <div class="container">
+
+            <span class="page-label">
+                ANIMAL ADOPTION
+            </span>
+
+            <h1>
+                Available Animals
+            </h1>
+
+            <p>
+                Browse animals that are currently available
+                for responsible adoption.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container animals-page">
+
+
+        <!-- =========================
+             AVAILABLE ANIMAL CONTROLS
+        ========================== -->
+
+        <section class="animal-controls">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="animalSearch"
+                    placeholder="Search animal name..."
+                >
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <select id="animalType">
+
+                    <option value="all">
+                        All Animals
+                    </option>
+
+                    <option value="dog">
+                        Dogs
+                    </option>
+
+                    <option value="cat">
+                        Cats
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             AVAILABLE ANIMALS
+        ========================== -->
+
+        <section class="animal-records-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        AVAILABLE FOR ADOPTION
+                    </span>
+
+                    <h2>
+                        Meet Our Animals
+                    </h2>
+
+                    <p>
+                        Find a loving companion and learn more
+                        about each animal before applying.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="animal-grid"
+                id="animalList"
+            >
+
+
+                <!-- BUDDY -->
+
+                <article
+                    class="animal-item"
+                    data-name="Buddy"
+                    data-type="dog"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐶
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Buddy
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Dog • 2 years • Male
+                        </p>
+
+
+                        <p class="animal-description">
+                            Friendly and playful. Buddy is
+                            vaccinated and ready for a loving home.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=buddy"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LUNA -->
+
+                <article
+                    class="animal-item"
+                    data-name="Luna"
+                    data-type="cat"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐱
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Luna
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Cat • 1 year • Female
+                        </p>
+
+
+                        <p class="animal-description">
+                            Gentle and affectionate. Luna enjoys
+                            quiet environments and caring families.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=luna"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MAX -->
+
+                <article
+                    class="animal-item"
+                    data-name="Max"
+                    data-type="dog"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐕
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Max
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Dog • 3 years • Male
+                        </p>
+
+
+                        <p class="animal-description">
+                            Active and energetic. Max enjoys
+                            playing and outdoor activities.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                ❤️ Healthy
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=max"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- BELLA -->
+
+                <article
+                    class="animal-item"
+                    data-name="Bella"
+                    data-type="cat"
+                >
+
+                    <div class="animal-image">
+
+                        <span>
+                            🐱
+                        </span>
+
+                    </div>
+
+
+                    <div class="animal-card-content">
+
+                        <div class="animal-card-top">
+
+                            <h3>
+                                Bella
+                            </h3>
+
+                            <span class="animal-status">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <p class="animal-type">
+                            Cat • 2 years • Female
+                        </p>
+
+
+                        <p class="animal-description">
+                            Affectionate and calm. Bella is
+                            receiving special care and monitoring.
+                        </p>
+
+
+                        <div class="animal-info">
+
+                            <span>
+                                🩺 Special Care
+                            </span>
+
+                            <span>
+                                💉 Vaccinated
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="animal-detail.html?animal=bella"
+                            class="view-animal-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- NO SEARCH RESULTS -->
+
+            <div
+                id="noResults"
+                class="no-animal-records"
+                style="display: none;"
+            >
+
+                <div class="no-animal-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    No Animals Found
+                </h3>
+
+                <p>
+                    Try searching for another animal or
+                    changing the animal type.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ANIMAL RECORD MANAGEMENT
+        ========================== -->
+
+        <section class="animal-records-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        ANIMAL RECORDS
+                    </span>
+
+                    <h2>
+                        Manage Animal Records
+                    </h2>
+
+                    <p>
+                        Authorized personnel can add, edit,
+                        and manage registered animal records.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADD ANIMAL BUTTON -->
+
+            <div class="animal-controls">
+
+                <button
+                    type="button"
+                    class="add-animal-btn"
+                    id="showAddAnimalForm"
+                >
+                    + Add Animal
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ADD / EDIT ANIMAL FORM
+            ========================== -->
+
+            <section
+                class="animal-form-section"
+                id="animalFormSection"
+                style="display: none;"
+            >
+
+                <div class="animal-form-header">
+
+                    <span class="section-label">
+                        ANIMAL RECORD
+                    </span>
+
+                    <h2 id="animalFormTitle">
+                        Add New Animal
+                    </h2>
+
+                </div>
+
+
+                <form id="animalForm">
+
+                    <input
+                        type="hidden"
+                        id="editAnimalId"
+                    >
+
+
+                    <div class="animal-form-grid">
+
+
+                        <!-- ANIMAL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="animalName">
+                                Animal Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="animalName"
+                                placeholder="Enter animal name"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- TYPE -->
+
+                        <div class="form-group">
+
+                            <label for="animalRecordType">
+                                Type
+                            </label>
+
+                            <select
+                                id="animalRecordType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Type
+                                </option>
+
+                                <option value="Dog">
+                                    Dog
+                                </option>
+
+                                <option value="Cat">
+                                    Cat
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- AGE -->
+
+                        <div class="form-group">
+
+                            <label for="animalAge">
+                                Age
+                            </label>
+
+                            <input
+                                type="text"
+                                id="animalAge"
+                                placeholder="Example: 2 years"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- GENDER -->
+
+                        <div class="form-group">
+
+                            <label for="animalGender">
+                                Gender
+                            </label>
+
+                            <select
+                                id="animalGender"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- HEALTH -->
+
+                        <div class="form-group">
+
+                            <label for="animalHealth">
+                                Health Status
+                            </label>
+
+                            <select
+                                id="animalHealth"
+                                required
+                            >
+
+                                <option value="Healthy">
+                                    Healthy
+                                </option>
+
+                                <option value="Under Treatment">
+                                    Under Treatment
+                                </option>
+
+                                <option value="Needs Monitoring">
+                                    Needs Monitoring
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- VACCINATION -->
+
+                        <div class="form-group">
+
+                            <label for="animalVaccination">
+                                Vaccination
+                            </label>
+
+                            <select
+                                id="animalVaccination"
+                                required
+                            >
+
+                                <option value="Up to date">
+                                    Up to date
+                                </option>
+
+                                <option value="Partially Vaccinated">
+                                    Partially Vaccinated
+                                </option>
+
+                                <option value="Not Vaccinated">
+                                    Not Vaccinated
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- CARE STATUS -->
+
+                        <div class="form-group">
+
+                            <label for="animalCare">
+                                Care Status
+                            </label>
+
+                            <select
+                                id="animalCare"
+                                required
+                            >
+
+                                <option value="Regular care">
+                                    Regular care
+                                </option>
+
+                                <option value="Special care">
+                                    Special care
+                                </option>
+
+                                <option value="Close monitoring">
+                                    Close monitoring
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- ADOPTION STATUS -->
+
+                        <div class="form-group">
+
+                            <label for="animalStatus">
+                                Adoption Status
+                            </label>
+
+                            <select
+                                id="animalStatus"
+                                required
+                            >
+
+                                <option value="Available">
+                                    Available
+                                </option>
+
+                                <option value="Pending">
+                                    Pending
+                                </option>
+
+                                <option value="Adopted">
+                                    Adopted
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="form-group form-full">
+
+                            <label for="animalDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="animalDescription"
+                                rows="4"
+                                placeholder="Enter animal description..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- FORM BUTTONS -->
+
+                    <div class="animal-form-actions">
+
+                        <button
+                            type="submit"
+                            class="save-animal-btn"
+                        >
+                            Save Animal
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="cancel-animal-btn"
+                            id="cancelAnimalForm"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =========================
+                 REGISTERED ANIMAL RECORDS
+            ========================== -->
+
+            <div class="animal-controls">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="animalRecordSearch"
+                        placeholder="Search animal records..."
+                    >
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <select id="animalRecordFilter">
+
+                        <option value="all">
+                            All Records
+                        </option>
+
+                        <option value="dog">
+                            Dogs
+                        </option>
+
+                        <option value="cat">
+                            Cats
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="animal-grid"
+                id="animalRecordList"
+            ></div>
+
+
+
+            <div
+                id="noAnimalRecords"
+                class="no-animal-records"
+                style="display: none;"
+            >
+
+                <div class="no-animal-icon">
+                    🐾
+                </div>
+
+                <h3>
+                    No Animal Records
+                </h3>
+
+                <p>
+                    Add an animal record to display it here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+                        🐾 Animal Adoption and Care System
+                    </h3>
+
+                    <p>
+                        Supporting responsible animal adoption
+                        and proper animal care.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        © 2026 Animal Adoption and Care System
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<style>
+    /* Keep public animal browsing visible */
+    body:has(.animals-page) section:has(#animalList) {
+        display: block !important;
+    }
+
+    #animalList .animal-item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #animalList .animal-card-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #animalList .view-animal-btn {
+        margin-top: auto;
+    }
+
+    .public-animal-image {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        display: block;
+    }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const animalList = document.getElementById("animalList");
+    const searchInput = document.getElementById("animalSearch");
+    const typeFilter = document.getElementById("animalType");
+    const noResults = document.getElementById("noResults");
+
+    if (!animalList) return;
+
+    let records = [];
+
+    try {
+        records = JSON.parse(
+            localStorage.getItem("animalRecords") || "[]"
+        );
+    } catch (error) {
+        records = [];
+    }
+
+    // Display only animals available for adoption
+    const availableAnimals = records.filter(function (animal) {
+        return (animal.status || "").toLowerCase() === "available";
+    });
+
+    // Keep the original public animal cards if no admin records exist
+    if (records.length > 0) {
+
+        animalList.innerHTML = "";
+
+        availableAnimals.forEach(function (animal) {
+
+            const type = (animal.type || "").toLowerCase();
+
+            const image = type === "cat"
+                ? animalRecordImages.cat
+                : animalRecordImages.dog;
+
+            const card = document.createElement("article");
+
+            card.className = "animal-item";
+            card.dataset.name = animal.name || "";
+            card.dataset.type = type;
+
+            const detailsURL =
+                "animal-detail.html?recordId=" +
+                encodeURIComponent(animal.id);
+
+            card.innerHTML = `
+                <img
+                    src="${image}"
+                    alt="${escapeHTML(animal.name)}"
+                    class="public-animal-image"
+                >
+
+                <div class="animal-card-content">
+
+                    <div class="animal-card-top">
+                        <h3>${escapeHTML(animal.name)}</h3>
+                        <span class="animal-status">Available</span>
+                    </div>
+
+                    <p class="animal-type">
+                        ${escapeHTML(animal.type)} •
+                        ${escapeHTML(animal.age)} •
+                        ${escapeHTML(animal.gender)}
+                    </p>
+
+                    <p class="animal-description">
+                        ${escapeHTML(animal.description)}
+                    </p>
+
+                    <div class="animal-info">
+                        <span>❤️ ${escapeHTML(animal.health)}</span>
+                        <span>💉 ${escapeHTML(animal.vaccination)}</span>
+                    </div>
+
+                    <a href="${detailsURL}" class="view-animal-btn">
+                        View Details
+                    </a>
+
+                </div>
+            `;
+
+            animalList.appendChild(card);
+        });
+    }
+
+    function filterPublicAnimals() {
+
+        const searchValue = searchInput
+            ? searchInput.value.toLowerCase().trim()
+            : "";
+
+        const typeValue = typeFilter
+            ? typeFilter.value.toLowerCase()
+            : "all";
+
+        const cards = animalList.querySelectorAll(".animal-item");
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+
+            const name = (card.dataset.name || "").toLowerCase();
+            const type = (card.dataset.type || "").toLowerCase();
+
+            const matchesName = name.includes(searchValue);
+            const matchesType = typeValue === "all" || type === typeValue;
+
+            card.style.display =
+                matchesName && matchesType ? "" : "none";
+
+            if (matchesName && matchesType) visibleCount++;
+        });
+
+        if (noResults) {
+            noResults.style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", filterPublicAnimals);
+    }
+
+    if (typeFilter) {
+        typeFilter.addEventListener("change", filterPublicAnimals);
+    }
+
+    filterPublicAnimals();
+
+});
+</script>
+</body>
+</html>

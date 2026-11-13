@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Animal Adoption and Care System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #DAF1DE;
+            color: #051F20;
+        }
+
+        .profile-container {
+            max-width: 950px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #B7D5BD;
+            box-shadow: 0 8px 30px rgba(5,31,32,.08);
+        }
+
+        .profile-heading {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 35px;
+            border-bottom: 1px solid #DCE9DE;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #235347;
+            color: white;
+            border: 5px solid #DAF1DE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .profile-heading h1 {
+            margin: 0 0 7px;
+            color: #051F20;
+        }
+
+        .profile-heading p {
+            margin: 0;
+            color: #6E8649;
+        }
+
+        .profile-status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #DAF1DE;
+            color: #235347;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .profile-content {
+            padding: 15px 35px 35px;
+        }
+
+        .profile-section {
+            margin-top: 25px;
+            padding: 25px;
+            border: 1px solid #DCE9DE;
+            border-radius: 13px;
+            background: #F8FBF7;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            color: #163832;
+            font-size: 20px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .profile-field label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #235347;
+        }
+
+        .profile-field input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #B7D5BD;
+            border-radius: 8px;
+            background: #FFFFFF;
+            color: #051F20;
+            font-size: 14px;
+        }
+
+        .profile-field input:focus {
+            outline: none;
+            border-color: #235347;
+            box-shadow: 0 0 0 3px rgba(142,182,155,.2);
+        }
+
+        .profile-field input:disabled {
+            background: #EDF4ED;
+            color: #52685B;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+        }
+
+        .profile-actions button {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .primary-profile-btn {
+            background: #235347;
+            color: white;
+        }
+
+        .primary-profile-btn:hover {
+            background: #051F20;
+        }
+
+        .secondary-profile-btn {
+            background: #DAF1DE;
+            color: #163832;
+        }
+
+        .secondary-profile-btn:hover {
+            background: #B7D5BD;
+        }
+
+        .profile-message {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #235347;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin: 25px 0;
+            color: #235347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 650px) {
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-heading {
+                padding: 25px 20px;
+            }
+
+            .profile-content {
+                padding: 10px 18px 25px;
+            }
+
+            .profile-section {
+                padding: 18px;
+            }
+
+            .profile-avatar {
+                width: 85px;
+                height: 85px;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🐾 Animal Care</a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="animals.html">Animals</a>
+                <a href="adoption.html">Adoption</a>
+                <a href="care.html">Care & Medical</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+
+        <section class="profile-card">
+
+            <div class="profile-heading">
+
+                <div class="profile-avatar" id="profileAvatar">A</div>
+
+                <div>
+                    <h1 id="profileName">Adopter Name</h1>
+                    <p id="profileUsernameDisplay">@username</p>
+                    <span class="profile-status">Registered Adopter</span>
+                </div>
+
+            </div>
+
+            <div class="profile-content">
+
+                <section class="profile-section">
+
+                    <h2>Personal Information</h2>
+
+                    <form id="profileForm">
+
+                        <div class="profile-grid">
+
+                            <div class="profile-field">
+                                <label for="profileFullName">Full Name</label>
+                                <input type="text" id="profileFullName" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profileEmail">Email Address</label>
+                                <input type="email" id="profileEmail" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profilePhone">Contact Number</label>
+                                <input type="tel" id="profilePhone" required disabled>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="profileUsernameInput">Username</label>
+                                <input type="text" id="profileUsernameInput"
+                                       minlength="4" required disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+
+                            <button type="button" class="primary-profile-btn"
+                                    id="editProfileBtn">
+                                Edit Profile
+                            </button>
+
+                            <button type="submit" class="primary-profile-btn"
+                                    id="saveProfileBtn" style="display:none;">
+                                Save Changes
+                            </button>
+
+                            <button type="button" class="secondary-profile-btn"
+                                    id="cancelProfileBtn" style="display:none;">
+                                Cancel
+                            </button>
+
+                        </div>
+
+                        <p class="profile-message" id="profileMessage"></p>
+
+                    </form>
+
+                </section>
+
+                <section class="profile-section">
+
+                    <h2>Account Settings</h2>
+
+                    <form id="passwordForm">
+
+                        <div class="profile-grid">
+
+                            <div class="profile-field">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword"
+                                       minlength="6" required>
+                            </div>
+
+                            <div class="profile-field">
+                                <label for="confirmNewPassword">Confirm New Password</label>
+                                <input type="password" id="confirmNewPassword"
+                                       minlength="6" required>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+                            <button type="submit" class="primary-profile-btn">
+                                Change Password
+                            </button>
+                        </div>
+
+                        <p class="profile-message" id="passwordMessage"></p>
+
+                    </form>
+
+                </section>
+
+                <a href="index.html" class="back-home">← Back to Home</a>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const session = JSON.parse(
+                localStorage.getItem("animalCareAdopter") || "null"
+            );
+
+            const loggedIn = localStorage.getItem("animalCareAdopterLoggedIn");
+
+            if (loggedIn !== "true" || !session) {
+                alert("Please log in to view your profile.");
+                window.location.href = "adopter-login.html";
+                return;
+            }
+
+            let adopters = JSON.parse(
+                localStorage.getItem("animalCareAdopters") || "[]"
+            );
+
+            let adopter = adopters.find(account =>
+                account.id == session.id
+            );
+
+            if (!adopter) {
+                alert("Adopter account not found.");
+                window.location.href = "index.html";
+                return;
+            }
+
+            const fullNameInput = document.getElementById("profileFullName");
+            const emailInput = document.getElementById("profileEmail");
+            const phoneInput = document.getElementById("profilePhone");
+            const usernameInput = document.getElementById("profileUsernameInput");
+
+            const editBtn = document.getElementById("editProfileBtn");
+            const saveBtn = document.getElementById("saveProfileBtn");
+            const cancelBtn = document.getElementById("cancelProfileBtn");
+            const profileMessage = document.getElementById("profileMessage");
+
+            function loadProfile() {
+
+                const currentSession = JSON.parse(
+                    localStorage.getItem("animalCareAdopter") || "null"
+                );
+
+                fullNameInput.value = currentSession.fullName || "";
+                emailInput.value = currentSession.email || "";
+                phoneInput.value = currentSession.phone || "";
+                usernameInput.value = currentSession.username || "";
+
+                document.getElementById("profileName").textContent =
+                    currentSession.fullName || "Adopter";
+
+                document.getElementById("profileUsernameDisplay").textContent =
+                    "@" + (currentSession.username || "");
+
+                const initials = (currentSession.fullName || "A")
+                    .trim()
+                    .split(/\s+/)
+                    .map(word => word[0])
+                    .join("")
+                    .substring(0, 2)
+                    .toUpperCase();
+
+                document.getElementById("profileAvatar").textContent = initials;
+            }
+
+            function setEditMode(enabled) {
+
+                fullNameInput.disabled = !enabled;
+                emailInput.disabled = !enabled;
+                phoneInput.disabled = !enabled;
+                usernameInput.disabled = !enabled;
+
+                editBtn.style.display = enabled ? "none" : "inline-block";
+                saveBtn.style.display = enabled ? "inline-block" : "none";
+                cancelBtn.style.display = enabled ? "inline-block" : "none";
+            }
+
+            loadProfile();
+
+            editBtn.addEventListener("click", function () {
+                profileMessage.textContent = "";
+                setEditMode(true);
+            });
+
+            cancelBtn.addEventListener("click", function () {
+                loadProfile();
+                setEditMode(false);
+                profileMessage.textContent = "";
+            });
+
+            document.getElementById("profileForm").addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const fullName = fullNameInput.value.trim();
+                const email = emailInput.value.trim().toLowerCase();
+                const phone = phoneInput.value.trim();
+                const username = usernameInput.value.trim();
+
+                if (!fullName || !email || !phone || !username) {
+                    profileMessage.textContent = "Please complete all fields.";
+                    return;
+                }
+
+                if (username.length < 4) {
+                    profileMessage.textContent =
+                        "Username must contain at least 4 characters.";
+                    return;
+                }
+
+                const duplicateEmail = adopters.some(account =>
+                    account.id != adopter.id &&
+                    (account.email || "").toLowerCase() === email
+                );
+
+                if (duplicateEmail) {
+                    profileMessage.textContent =
+                        "This email is already registered.";
+                    return;
+                }
+
+                const duplicateUsername = adopters.some(account =>
+                    account.id != adopter.id &&
+                    (account.username || "").toLowerCase() === username.toLowerCase()
+                );
+
+                if (duplicateUsername) {
+                    profileMessage.textContent =
+                        "This username is already taken. Please choose another.";
+                    return;
+                }
+
+                adopter.fullName = fullName;
+                adopter.email = email;
+                adopter.phone = phone;
+                adopter.username = username;
+
+                localStorage.setItem(
+                    "animalCareAdopters",
+                    JSON.stringify(adopters)
+                );
+
+                const updatedSession = {
+                    id: adopter.id,
+                    fullName: adopter.fullName,
+                    email: adopter.email,
+                    phone: adopter.phone,
+                    username: adopter.username
+                };
+
+                localStorage.setItem(
+                    "animalCareAdopter",
+                    JSON.stringify(updatedSession)
+                );
+
+                loadProfile();
+                setEditMode(false);
+
+                profileMessage.textContent =
+                    "Profile updated successfully.";
+            });
+
+            document.getElementById("passwordForm").addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const currentPassword =
+                    document.getElementById("currentPassword").value;
+
+                const newPassword =
+                    document.getElementById("newPassword").value;
+
+                const confirmNewPassword =
+                    document.getElementById("confirmNewPassword").value;
+
+                const message = document.getElementById("passwordMessage");
+
+                if (adopter.password !== currentPassword) {
+                    message.textContent = "Current password is incorrect.";
+                    return;
+                }
+
+                if (newPassword.length < 6) {
+                    message.textContent =
+                        "New password must contain at least 6 characters.";
+                    return;
+                }
+
+                if (newPassword !== confirmNewPassword) {
+                    message.textContent = "New passwords do not match.";
+                    return;
+                }
+
+                adopter.password = newPassword;
+
+                localStorage.setItem(
+                    "animalCareAdopters",
+                    JSON.stringify(adopters)
+                );
+
+                this.reset();
+
+                message.textContent = "Password changed successfully.";
+            });
+
+        });
+    </script>
+
+</body>
+</html>
